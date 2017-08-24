@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/wooxo/OvhSwiftLaravel.svg?branch=master)](https://travis-ci.org/wooxo/OvhSwiftLaravel)
 [![Latest Stable Version](https://poser.pugx.org/wooxo/ovh-swift-laravel/v/stable.png)](https://packagist.org/packages/wooxo/ovh-swift-laravel) [![Total Downloads](https://poser.pugx.org/wooxo/ovh-swift-laravel/downloads.png)](https://packagist.org/packages/wooxo/ovh-swift-laravel)
 
-It's a library for Laravel 5.2.
+It's a library for Laravel 5.4.
 
 For Laravel 4.2, use 0.1.x tags.
 
