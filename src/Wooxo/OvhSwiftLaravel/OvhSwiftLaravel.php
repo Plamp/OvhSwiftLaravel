@@ -38,9 +38,9 @@ class OvhSwiftLaravel {
      */
     public function __construct(){
         $this->client = new OpenStack($this->url, array(
-            'username' => 'yourUsername',
-            'password' => 'yourPassword',
-            'tenantId' => 'yourTeenantId',
+            'username' => env('SWIFTUSERNAME'),
+            'password' => env('SWIFTPASSWORD'),
+            'tenantId' => env('SWIFTTENANTID'),
         ));
         $cacheFile = storage_path() . '/.opencloud_token';
         // If the cache file exists, try importing it into the client
@@ -54,8 +54,8 @@ class OvhSwiftLaravel {
             $this->client->authenticate();
             file_put_contents($cacheFile, serialize($this->client->exportCredentials()));
         }
-        $this->service = $this->client->objectStoreService('swift', 'SBG1', 'publicURL');
-        $this->container = $this->service->getContainer('yourContainer');
+        $this->service = $this->client->objectStoreService('swift', env('SWIFTREGION'), 'publicURL');
+        $this->container = $this->service->getContainer(env('SWIFTCONTAINER'));
     }
 
 
